@@ -1,4 +1,4 @@
-botao.onclick = async function(){
+botao.onclick = function(){
     mensagem.innerText = "Carregando...";
 
     finalizar().then((msg) => {
