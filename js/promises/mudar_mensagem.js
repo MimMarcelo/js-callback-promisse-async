@@ -1,14 +1,15 @@
-botao.onclick = function(){
+botao.onclick = async function(){
     mensagem.innerText = "Carregando...";
 
-    p.then((msg) => {
+    finalizar().then((msg) => {
         mensagem.innerText = msg;
     });
 }
 
-const p = new Promise((resolve) => {
-    setTimeout(() => {
-        resolve("Concluído");
-    }, 5000);
-});
-
+function finalizar(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Concluído");
+        }, 5000);
+    });
+}
